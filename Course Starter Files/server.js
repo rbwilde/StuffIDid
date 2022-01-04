@@ -7,9 +7,9 @@ const nextApp = next({ dev });
 const handle = nextApp.getRequestHandler();
 require("dotenv").config({ path: "./config.env" });
 const connectDb = require("./utilsServer/connectDb");
-connectDb();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
+connectDb();
 
 nextApp.prepare().then(() => {
   app.use("/api/signup", require("./api/signup"));
