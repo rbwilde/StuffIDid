@@ -9,7 +9,7 @@ require("dotenv").config({ path: "./config.env" });
 const connectDb = require("./utilsServer/connectDb");
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
-connectDb();
+connectDb(); 
 
 nextApp.prepare().then(() => {
   app.use("/api/signup", require("./api/signup"));

@@ -8,7 +8,7 @@ class MyApp extends App {
 
     return (
       <Layout>
-        <Component />
+        <Component /> 
       </Layout>
     );
   }
